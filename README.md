@@ -19,7 +19,7 @@ PS C:\Studying\6_sem\Chmura\lab12_lemp> docker compose up -d
  ✔ Container lemp_mysql              Started                                                                       0.6s
  ✔ Container lemp_nginx              Started                                                                       0.5s
  ✔ Container lemp_pma                Started                                                                       0.5s
-
+```
  2. Instalacja modułu MySQL dla PHP wewnątrz kontenera:
  ```bash
  PS C:\Studying\6_sem\Chmura\lab12_lemp> docker exec -it lemp_php sh -c "docker-php-ext-install mysqli && kill -USR2 1"
@@ -33,6 +33,7 @@ checking for a sed that does not truncate output... /usr/bin/sed
 checking for pkg-config... /usr/bin/pkg-config
 (nie bede wklejal tego wszystkiego)
 .................................
+```
 3. Weryfikacja uruchomionych usług:
 ```bash
 PS C:\Studying\6_sem\Chmura\lab12_lemp> docker compose ps
@@ -41,6 +42,8 @@ lemp_mysql   mysql:8.3.0                   "docker-entrypoint.s…"   mysql     
 lemp_nginx   nginx:1.25.4                  "/docker-entrypoint.…"   nginx        3 minutes ago   Up 3 minutes   0.0.0.0:4001->80/tcp, [::]:4001->80/tcp
 lemp_php     php:8.3-fpm                   "docker-php-entrypoi…"   php          3 minutes ago   Up 3 minutes   9000/tcp
 lemp_pma     phpmyadmin/phpmyadmin:5.2.1   "/docker-entrypoint.…"   phpmyadmin   3 minutes ago   Up 3 minutes   0.0.0.0:6001->80/tcp, [::]:6001->80/tcp
+```
 4. Test poprawnego działania serwera WWW i skryptu PHP:
 ```bash
 http://localhost:4001
+```
