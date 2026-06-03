@@ -1,5 +1,5 @@
 <?php
-echo "<h1>Stack LEMP dziala poprawnie!</h1>";
+echo "<h1>Stack LEMP dziala poprawnie</h1>";
 echo "<h3>Informacje o PHP:</h3>";
 
 $host = 'mysql';
